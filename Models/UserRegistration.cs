@@ -10,7 +10,7 @@ namespace DataValidationProject.Models
         [Required(ErrorMessage = "Username is required.")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Usernmae must be between 3 and 20 characters.")]
         [RegularExpression(@"^[a-zA-Z0-9_-]+$", ErrorMessage = "Usernmae can only contains letters, numbers, underscores and hyphens.")]
-        [Remote(action: "CheckUsernmae", controller: "Account", ErrorMessage = "This username is already taken")]
+        [Remote(action: "CheckUsername", controller: "Account", ErrorMessage = "This username is already taken")]
         public string Username { get; set; }
 
 
